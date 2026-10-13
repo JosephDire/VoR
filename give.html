@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="am" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <title>መስጠት | Give - Voice of Remnants</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Noto Sans Ethiopic & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Ethiopic:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            DEFAULT: '#D4AF37',
+                            light: '#F3E5AB',
+                            dark: '#AA820A',
+                            hover: '#C59B27'
+                        },
+                        royal: {
+                            DEFAULT: '#1E3A8A',
+                            light: '#2563EB',
+                            dark: '#0F172A',
+                            accent: '#1D4ED8'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans Ethiopic', 'Inter', 'sans-serif'],
+                        english: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Sans Ethiopic', 'Inter', sans-serif;
+        }
+        /* Custom styled scrollbars */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #D4AF37;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #AA820A;
+        }
+        /* Minimalist Google Translate Styling */
+        #google_translate_element select {
+            background-color: rgba(255, 255, 255, 0.9);
+            border: 1px solid #D4AF37;
+            color: #1E3A8A;
+            padding: 4px 8px;
+            font-size: 12px;
+            border-radius: 6px;
+            outline: none;
+            cursor: pointer;
+        }
+        .goog-te-gadget {
+            color: transparent !important;
+            font-size: 0px !important;
+        }
+        .goog-te-gadget span {
+            display: none !important;
+        }
+        .goog-te-banner-frame {
+            display: none !important;
+        }
+        body {
+            top: 0px !important;
+        }
+        /* Active nav link highlight */
+        .nav-link.active {
+            color: #D4AF37;
+            border-bottom: 2px solid #D4AF37;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 flex flex-col min-h-screen">
+
+
+    <!-- TOP ANNOUNCEMENT / TRANSLATE BAR -->
+    <header class="bg-royal-dark text-slate-200 text-xs py-2 px-4 sticky top-0 z-50 shadow-md">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center space-x-4">
+                <span class="flex items-center gap-1"><i class="fa-solid fa-phone text-gold text-xs"></i> +1 502-291-0660</span>
+                <span class="hidden md:inline flex items-center gap-1"><i class="fa-solid fa-envelope text-gold text-xs"></i> YaredAfewerk91@Yahoo.com</span>
+            </div>
+            
+            <div class="flex items-center gap-3">
+                <span class="text-slate-300 hidden sm:inline"><i class="fa-solid fa-globe text-gold mr-1"></i> Language:</span>
+                <!-- Google Translate Dropdown Container -->
+                <div id="google_translate_element" class="inline-block"></div>
+                <script type="text/javascript">
+                    function googleTranslateElementInit() {
+                        new google.translate.TranslateElement({
+                            pageLanguage: 'am',
+                            includedLanguages: 'en,am,om,ti',
+                            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                            autoDisplay: false
+                        }, 'google_translate_element');
+                    }
+                </script>
+                <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN BRAND & NAVIGATION NAVBAR -->
+    <nav class="bg-royal text-white shadow-lg sticky top-8 z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo and Ministry Title -->
+                <div class="flex items-center space-x-3 cursor-pointer" onclick="location.href='index.html'">
+                    <img src="images/vor-logo.png" onerror="this.onerror=null; this.src='https://placehold.co/80x80/1E3A8A/D4AF37?text=VoR';" alt="VoR Logo" class="h-14 w-14 object-contain rounded-full border-2 border-gold shadow-md">
+                    <div>
+                        <h1 class="text-xl sm:text-2xl font-bold tracking-wide text-gold">የቅሬታዎች ድምፅ</h1>
+                        <p class="text-xs sm:text-sm font-english text-slate-200 tracking-wider">Voice of Remnants (VoR)</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation Links -->
+                <div class="hidden xl:flex items-center space-x-1 font-english text-sm font-medium">
+                    <a href="index.html" id="nav-home" class="nav-link px-3 py-2 transition hover:text-gold">Home</a>
+                    <a href="about.html" id="nav-about" class="nav-link px-3 py-2 transition hover:text-gold">About Us</a>
+                    <a href="ministries.html" id="nav-ministries" class="nav-link px-3 py-2 transition hover:text-gold">Ministries</a>
+                    <a href="sermons.html" id="nav-sermons" class="nav-link px-3 py-2 transition hover:text-gold">Sermons</a>
+                    <a href="events.html" id="nav-events" class="nav-link px-3 py-2 transition hover:text-gold">Events</a>
+                    <a href="prayer.html" id="nav-prayer" class="nav-link px-3 py-2 transition hover:text-gold">Prayer Request</a>
+                    <a href="testimonies.html" id="nav-testimonies" class="nav-link px-3 py-2 transition hover:text-gold">Testimonies</a>
+                    <a href="give.html" id="nav-give" class="nav-link active bg-gold hover:bg-gold-hover text-royal-dark px-4 py-2 rounded-full font-bold transition shadow-md">Give</a>
+                    <a href="contact.html" id="nav-contact" class="nav-link px-3 py-2 transition hover:text-gold">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="xl:hidden flex items-center">
+                    <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="text-slate-200 hover:text-gold focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden xl:hidden bg-royal-dark border-t border-gold/20 px-4 pt-2 pb-6 space-y-2 font-english">
+            <a href="index.html" class="block w-full text-left px-3 py-2 rounded text-slate-200 hover:bg-royal hover:text-gold">Home</a>
+            <a href="about.html" class="block w-full text-left px-3 py-2 rounded text-slate-200 hover:bg-royal hover:text-gold">About Us</a>
+            <a href="ministries.html" class="block w-full text-left px-3 py-2 rounded text-slate-200 hover:bg-royal hover:text-gold">Ministries</a>
+            <a href="sermons.html" class="block w-full text-left px-3 py-2 rounded text-slate-200 hover:bg-royal hover:text-gold">Sermons (Audio/Video)</a>
+            <a href="events.html" class="block w-full text-left px-3 py-2 rounded text-slate-200 hover:bg-royal hover:text-gold">Events</a>
+            <a href="prayer.html" class="block w-full text-left px-3 py-2 rounded text-slate-200 hover:bg-royal hover:text-gold">Prayer Request</a>
+            <a href="testimonies.html" class="block w-full text-left px-3 py-2 rounded text-slate-200 hover:bg-royal hover:text-gold">Testimonies</a>
+            <a href="give.html" class="block w-full text-center px-3 py-2 rounded bg-gold text-royal-dark font-bold hover:bg-gold-hover">Give / Donation</a>
+            <a href="contact.html" class="block w-full text-left px-3 py-2 rounded text-slate-200 hover:bg-royal hover:text-gold">Contact</a>
+        </div>
+    </nav>
+
+    
+    <main class="flex-grow">
+        <section class="page-content block">
+            <div class="bg-royal-dark text-white py-12 px-4 text-center">
+                <h1 class="text-3xl sm:text-4xl font-bold text-gold">አገልግሎቱን ይደግፉ (Give / Donations)</h1>
+                <p class="text-slate-300 font-english text-sm mt-2">Support Voice of Remnants Ministry Digitally</p>
+            </div>
+
+            <div class="max-w-5xl mx-auto px-4 py-12 sm:px-6 lg:px-8 space-y-8">
+                <div class="text-center max-w-2xl mx-auto">
+                    <p class="text-slate-600">
+                        በስጦታዎና በደጋፊነትዎ ወንጌልን ለብዙዎች ማድረስ እንችላለን። እግዚአብሔር በደስታ የሚሰጠውን ይወዳል!
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Zelle Payment Option -->
+                    <div class="bg-white rounded-3xl p-8 shadow-md border-2 border-purple-100 flex flex-col items-center text-center">
+                        <div class="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center text-purple-700 text-2xl font-bold mb-4">
+                            Zelle
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-800 mb-2">Zelle Account</h3>
+                        <p class="text-slate-500 text-sm mb-4">የ Zelle አካውንት መረጃ:</p>
+                        <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 w-full font-mono text-lg text-royal font-bold select-all">
+                            +1 502-291-0660
+                        </div>
+                        <p class="text-xs text-slate-400 mt-2">Name: Pastor Yared Eshete</p>
+                    </div>
+
+                    <!-- PayPal / Online Card Option -->
+                    <div class="bg-white rounded-3xl p-8 shadow-md border-2 border-blue-100 flex flex-col items-center text-center">
+                        <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center text-blue-600 text-2xl font-bold mb-4">
+                            <i class="fa-brands fa-paypal"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-800 mb-2">PayPal & Credit Card</h3>
+                        <p class="text-slate-500 text-sm mb-4">በኦንላይን በሴኪዩር መንገድ ለመስጠት:</p>
+                        <button onclick="alert('የ PayPal መስጫ ገጽ በቅርብ ቀን ይከፈታል! ለእርዳታዎ እናመሰግናለን።')" class="bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-3 rounded-xl transition w-full shadow-md">
+                            Donate via PayPal
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-royal-dark text-slate-300 mt-20 border-t-4 border-gold">
+        <div class="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <!-- Footer Column 1: Brand -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <img src="images/vor-logo.png" onerror="this.onerror=null; this.src='https://placehold.co/80x80/1E3A8A/D4AF37?text=VoR';" alt="VoR Logo" class="h-12 w-12 object-contain rounded-full border border-gold">
+                        <div>
+                            <h3 class="text-xl font-bold text-gold">የቅሬታዎች ድምፅ</h3>
+                            <p class="text-xs font-english text-slate-400">Voice of Remnants (VoR) Ministry</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-slate-400 leading-relaxed max-w-md">
+                        በዲያስፖራ ለሚኖሩ ኢትዮጵያውያንና ኤርትራውያን የእግዚአብሔርን ቃል በዲጂታል መንገድ የሚያደርስ አገልግሎት።
+                    </p>
+                </div>
+
+                <!-- Footer Column 2: Navigation Links -->
+                <div>
+                    <h4 class="text-white font-bold mb-4 font-english">Quick Links</h4>
+                    <ul class="space-y-2 text-sm font-english">
+                        <li><a href="index.html" class="hover:text-gold transition">Home</a></li>
+                        <li><a href="about.html" class="hover:text-gold transition">About Us</a></li>
+                        <li><a href="sermons.html" class="hover:text-gold transition">Sermons</a></li>
+                        <li><a href="prayer.html" class="hover:text-gold transition">Prayer Request</a></li>
+                        <li><a href="give.html" class="hover:text-gold transition">Give / Donate</a></li>
+                    </ul>
+                </div>
+
+                <!-- Footer Column 3: Social Media Links -->
+                <div>
+                    <h4 class="text-white font-bold mb-4 font-english">Social Media</h4>
+                    <div class="flex flex-col space-y-3">
+                        <a href="https://www.youtube.com/@VoiceOfRemnants" target="_blank" class="flex items-center space-x-2 text-slate-300 hover:text-red-500 transition">
+                            <i class="fa-brands fa-youtube text-xl w-6"></i>
+                            <span class="text-sm font-english">YouTube Channel</span>
+                        </a>
+                        <a href="https://web.facebook.com/yared.eshete.9" target="_blank" class="flex items-center space-x-2 text-slate-300 hover:text-blue-500 transition">
+                            <i class="fa-brands fa-facebook text-xl w-6"></i>
+                            <span class="text-sm font-english">Facebook Page</span>
+                        </a>
+                        <a href="https://tiktok.com" target="_blank" class="flex items-center space-x-2 text-slate-300 hover:text-pink-400 transition">
+                            <i class="fa-brands fa-tiktok text-xl w-6"></i>
+                            <span class="text-sm font-english">TikTok Account</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Copyright Bar -->
+            <div class="border-t border-slate-800 pt-8 text-center text-xs text-slate-500 font-english">
+                <p>&copy; <span id="current-year"></span> Voice of Remnants (VoR) Ministry / የቅሬታዎች ድምፅ። All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        function toggleMobileMenu() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
